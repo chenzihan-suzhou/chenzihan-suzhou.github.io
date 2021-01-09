@@ -1,0 +1,33 @@
+
+      html {
+        /* https://stackoverflow.com/a/56467997 */
+        scroll-padding-top: 120px;
+      }
+      :target {
+        animation: flash 3s;
+      }
+      @keyframes flash {
+        0% {
+          background-color: rgba(255, 255, 0, 0.5);
+        }
+        100% {
+          background-color: transparent;
+        }
+      }
+      button,
+      input[type=file],
+      ::-webkit-file-upload-button {
+        cursor: pointer;
+      }
+      #load-no-minify {
+        font-size: 1.2em;
+      }
+      .offline::after {
+        content: 'Offline edition';
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        color: rgba(0, 0, 0, 0.5);
+        margin: 10px;
+      }
+    
