@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>���Ӻ����˿ռ�</title>
+    <title>陈子涵个人空间</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -15,5 +15,96 @@
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 </head>
 <body>
+<ul class="nav nav-tabs" role="tablist">
+		<li><h3>我的空间</h3></li><br>
+        <li role="presentation" class="active" id="zhuye"><a>主页</a></li>
+        <li role="presentation" id="gonggong"><a>编程</a></li>
+        <li role="presentation" id="gereng"><a>信息</a></li>
+      </ul>
+<div class="container theme-showcase" role="main" id="1gereng">
+<div class="jumbotron">
+<form id="secret">
+<div class="form-group">
+<h1>获取个人信息</h1>
+      <label for="pwd"><h3>密码:</h3></label>
+      <input type="password" class="form-control" id="pwd" placeholder="输入密码">
+    </div>
+<p>请勿ENTER！请点击确认！</p>
+<button type="button" class="btn btn-lg btn-default" id="ok" style="display: inline-block;"><h2>确认</h2></button>
+</form>
+<div id="grxx">
+<h2>我的个人信息</h2>
+<table class="table">
+<thead>
+<tr>
+<th>名字</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>邮箱</td>
+<td>275549947@qq.com</td>
+</tr>
+<tr><td>邮箱密码</td><td>Ellen928</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="container theme-showcase" role="main" id="1gonggong">
+<div class="jumbotron">
+</div>
+</div>
+<div class="container theme-showcase" role="main" id="1zhuye">
+<div class="jumbotron">
+<p>这是我的个人空间，可以在这里面做一些工作。</p>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+  $("#zhuye").click(function(){
+	 $("#gonggong").attr("class","undefined");
+	 $("#gereng").attr("class","undefined");
+     $(this).attr("class","active");
+	 $("#1gonggong").hide();
+	$("#1gereng").hide();
+	$("#1zhuye").show();
+  });
+    $("#gonggong").click(function(){
+	 $("#zhuye").attr("class","undefined");
+	 $("#gereng").attr("class","undefined");
+     $(this).attr("class","active");
+	 	 $("#1gonggong").show();
+	$("#1gereng").hide();
+	$("#1zhuye").hide();
+  });
+     $("#gereng").click(function(){
+	 $("#zhuye").attr("class","undefined");
+	 $("#gonggong").attr("class","undefined");
+	 	 $("#1gonggong").hide();
+	$("#1gereng").show();
+	$("#1zhuye").hide();
+     $(this).attr("class","active");
+  });    $("#ok").click(function(){
+	if($("#pwd").val()=="czhsecret"){
+	$("#grxx").show();
+	$("#secret").hide();
+	}
+	else{
+	alert("请输入正确的密码！")
+	}
+	  });
+});
+</script>
+<script>
+$(document).ready(function(){
+	$("#1zhuye").show();
+	 $("#1gonggong").hide();
+	 $("#ppp").hide();
+	 $("#grxx").hide();
+	$("#1gereng").hide();})
+</script>
+
 </body>
 </html>
