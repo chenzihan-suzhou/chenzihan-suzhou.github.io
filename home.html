@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="a1.css" rel="stylesheet" type="text/css" />
-<link href="a2.css" rel="stylesheet" type="text/css" />
-<meta charset="utf-8">
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Theme Template for Bootstrap</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="theme.css" rel="stylesheet">
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 <title>陈子涵</title>
 </head>
-<body>
-<div class="header">
-<h1>陈子涵</h1>
-</div>
+<body><ul class="nav nav-tabs" role="tablist">
+		<li><h3>陈子涵</h3></li>
+        <li role="presentation" class="active" id="zhuye"><a href="#">主页</a></li>
+        <li role="presentation" id="gonggong"><a href="#">公共</a></li>
+        <li role="presentation" id="gereng"><a href="#">个人</a></li>
+      </ul>
+<div class="container theme-showcase" role="main">
 <div class="mainarea">
-<p>你好！我是陈子涵，这是我的网址。</p>
 </div>
+<div class="jumbotron">
+        <h1>我是陈子涵！</h1>
+        <p>你好，欢迎来到我的网站。我的邮箱是<a href='mailto:275549947@qq.com'>275549947@qq.com</a></p>
+      </div>
 <div class="mainarea">
+<div class="jumbotron">
 <h3>常用工具</h3>
-<button class="htmlify" id="other-htmlify-btn"><a href='https://chenzihan-suzhou.github.io/scratch.html'><h2>scratch转换器</h2></a></button>
+<button type="button" class="btn btn-lg btn-primary"<a href='https://chenzihan-suzhou.github.io/scratch.html'>scratch转换器</a></button>
 </div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+  $("li").click(function(){
+     $("#gonggong").attr("class","active");
+	 alert($("gereng").attr("class"));
+  });
+});
+</script>
 </body>
 </html>
