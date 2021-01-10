@@ -1,69 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-function myFunction() {
-    // Declare variables 
-    var input, filter, table, tr, td, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-            } else {
-                tr[i].style.display = "none";
-            }
-        }
-    }
-}
-<style type="text/css">
-#myInput {
-	/* Add a search icon to input */
-    background-position:10px 12px;
-	/* Position the search icon */
-    background-repeat:no-repeat;
-	/* Do not repeat the icon image */
-    width:100%;
-	/* Full-width */
-    font-size:16px;
-	/* Increase font-size */
-    padding:12px 20px 12px 40px;
-	/* Add some padding */
-    border:1px solid #ddd;
-	/* Add a grey border */
-    margin-bottom:12px;
-	/* Add some space below the input */
-}
-#myTable {
-	border-collapse:collapse;
-	/* Collapse borders */
-    width:100%;
-	/* Full-width */
-    border:1px solid #ddd;
-	/* Add a grey border */
-    font-size:18px;
-	/* Increase font-size */
-}
-#myTable th,#myTable td {
-	text-align:left;
-	/* Left-align text */
-    padding:12px;
-	/* Add padding */
-}
-#myTable tr {
-	/* Add a bottom border to all table rows */
-    border-bottom:1px solid #ddd;
-}
-#myTable tr.header,#myTable tr:hover {
-	/* Add a grey background color to the table header and on hover */
-    background-color:#f1f1f1;
-}
-</style>
-</script>
 <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,7 +13,6 @@ function myFunction() {
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="theme.css" rel="stylesheet">
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-<title>陈子涵</title>
 </head>
 <body><ul class="nav nav-tabs" role="tablist">
 		<li><h3>陈子涵</h3></li><br>
@@ -114,7 +50,15 @@ function myFunction() {
 
 <div class="container theme-showcase" role="main" id="1gereng">
 <div class="jumbotron">
-<button type="button" class="btn btn-lg btn-default"><h1><a href="https://chenzihan-suzhou.github.io/private/">进入个人空间</a></h1></button>
+<form>
+<div class="form-group">
+      <label for="pwd"><h3>密码:</h3></label>
+      <input type="password" class="form-control" id="pwd" placeholder="输入密码">
+    </div>
+<p>请勿ENTER！请点击确认！</p>
+<button type="button" class="btn btn-lg btn-default" id="ok" style="display: inline-block;"><h2>确认</h2></button>
+</form>
+<button type="button" class="btn btn-lg btn-default" id="ppp"><h2><a href="https://chenzihan-suzhou.github.io/private12345678910.html">进入个人空间</a></h2></button>
 </div>
 </div>
 <script>
@@ -143,12 +87,21 @@ $(document).ready(function(){
 	$("#1zhuye").hide();
      $(this).attr("class","active");
   });
+    $("#ok").click(function(){
+	if($("#pwd").val()=="chenzihanzuiniule"){
+	$("#ppp").show();
+	}
+	else{
+	alert("请输入正确的密码！")
+	}
+	  });
 });
 </script>
 <script>
 $(document).ready(function(){
 	$("#1zhuye").show();
 	 $("#1gonggong").hide();
+	 $("#ppp").hide();
 	$("#1gereng").hide();})
 </script>
 </body>
