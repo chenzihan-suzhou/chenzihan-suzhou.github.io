@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="theme.css" rel="stylesheet">
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+<title>试卷编辑</title>
+</head>
+<body>
+<div class="jumbotron">
+<h2>
+试卷内容
+</h2>
+<ol>
+</ol>
+</div>
+<form>
+<center>
+<button type="button" class="btn btn-lg btn-default" id="addonexuan" style="display: inline-block;"  onClick="javascript:addxuanze()">添加选择题</button>
+<div class="jumbotorn" id="addxuan">
+      <label"><h3>添加选择题:</h3></label><br/>
+      <h3>题目:</h3><input type="password" class="form-control" id="timu" placeholder="输入题目"><br/>
+<h3>选项A:</h3><input type="password" class="form-control" id="xa" placeholder="输入选项"><br/>
+ <h3>选项B:</h3><input type="password" class="form-control" id="xb" placeholder="输入选项"><br/>
+	  <h3>选项C:</h3><input type="password" class="form-control" id="xc" placeholder="输入选项"><br/>
+	        <h3>选项D:</h3><input type="password" class="form-control" id="xd" placeholder="输入选项"><br/>
+			<h3>正确答案:</h3>
+<div class="radio">
+	<label>
+		<input type="radio" name="optionsRadios" id="A" value="A" checked>A
+	</label>
+</div>
+<div class="radio">
+	<label>
+		<input type="radio" name="optionsRadios" id="B" value="B">B
+	</label>
+</div>
+<div class="radio">
+	<label>
+		<input type="radio" name="optionsRadios" id="C" value="C">C
+	</label>
+</div>
+<div class="radio">
+	<label>
+		<input type="radio" name="optionsRadios" id="D" value="D">D
+	</label>
+</div>
+	  <button type="button" class="btn btn-lg btn-default" id="okadd" style="display: inline-block;">添加</button>
+	  <button type="button" class="btn btn-lg btn-default" id="canceladd" style="display: inline-block;">取消</button>
+</div>
+<br/><br/>
+<button type="button" class="btn btn-lg btn-default" id="shengcheng" style="display: inline-block;" onClick="javascript:shengcheng()"><h3>生成</h3></button>
+<button type="button" class="btn btn-lg btn-default" id="download" style="display: inline-block;" onClick="javascript:downloadhtml()"><h3>下载</h3></button>
+</center>
+</form>
+<script>
+var xuan=new Array();
+function download(filename, text) {
+    var pom = document.createElement('a');
+    pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    pom.setAttribute('download', filename);
+
+    if (document.createEvent) {
+        var event = document.createEvent('MouseEvents');
+        event.initEvent('click', true, true);
+        pom.dispatchEvent(event);
+    }
+    else {
+        pom.click();
+    }
+}
+</script>
+<script>
+function xianshi(){
+}
+function downloadhtml(){
+download(name,txt);
+}
+function addxuanze(){
+}
+function shengchenng(){
+}
+</script>
+<script>
+$(document).ready(function(){
+$("#addxuan").hide();
+});
+</script>
+<script>
+$(document).ready(function(){
+$("#addonexuan").click(function(){
+$("#addxuan").show();
+})
+$("#canceladd").click(function(){
+$("#addxuan").hide();
+})
+});
+</script>
+<script>
+$(document).ready(function(){
+
+$("#okadd").click(function(){
+var answerx=$("input[type='radio']:checked").val();
+var xxx= new Array();
+xxx[0]=$("#xa"）.val();
+xxx[1]=$("#xb"）.val();
+xxx[2]=$("#xc"）.val();
+xxx[3]=$("#xd"）.val();
+var timux=$("#timu").val();
+var xuanzex={answer=answerx,xx=xxx,timu=timux};
+xuanze.push(xuanzex);
+xianshi();
+})
+});
+</script>
+</body>
+</html>
