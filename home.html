@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" href="icon1.ico">
 <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 </head>
 <body><ul class="nav nav-tabs" role="tablist">
+<li><img src="icon1.ico"</li></li>
 		<li><h3>陈子涵</h3></li><br>
         <li role="presentation" class="active" id="zhuye"><a>主页</a></li>
         <li role="presentation" id="gonggong"><a>公共</a></li>
@@ -50,7 +52,7 @@
 
 <div class="container theme-showcase" role="main" id="1gereng">
 <div class="jumbotron">
-<form>
+<form id="mima">
 <div class="form-group">
       <label for="pwd"><h3>密码:</h3></label>
       <input type="password" class="form-control" id="pwd" placeholder="输入密码">
@@ -90,6 +92,7 @@ $(document).ready(function(){
     $("#ok").click(function(){
 	if($("#pwd").val()=="chenzihanzuiniule"){
 	$("#ppp").show();
+	$("#mima").hide();
 	}
 	else{
 	alert("请输入正确的密码！")
