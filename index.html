@@ -1,112 +1,43 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-<link rel="shortcut icon" href="icon1.ico">
-<script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>陈子涵的主页</title>
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <link href="theme.css" rel="stylesheet">
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>无标题文档</title>
+<link href="css/bootstrap-4.0.0.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<body><ul class="nav nav-tabs" role="tablist">
-<li><img src="icon1.ico"</li></li>
-		<li><h3>陈子涵</h3></li><br>
-        <li role="presentation" class="active" id="zhuye"><a>主页</a></li>
-        <li role="presentation" id="gonggong"><a>公共</a></li>
-        <li role="presentation" id="gereng"><a>个人</a></li>
-      </ul>
-<div class="container theme-showcase" role="main" id="1zhuye">
-<div class="jumbotron">
-        <h1>我是陈子涵!</h1>
-        <p>你好，欢迎来到我的网站。我的邮箱是<a href='mailto:275549947@qq.com'>275549947@qq.com</a>。你可以通过我的邮箱像我发送你对网站的建议。</p>
-      </div>
-</div>
 
-<div class="container theme-showcase" role="main" id="1gonggong">
-<head>
-<div class="jumbotron">
-<h1>一些小工具</h1>
-<table class="table">
-<thead>
-<tr>
-<th>名称</th>
-<th>简介</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://chenzihan-suzhou.github.io/scratch.html">scratch转换器</a>
-</td>
-<td>一个将scratch文件转换为html的程序</td>
-</tr>
-</tbody>
-</table>
-</div>
-</head>
-</div>
-
-<div class="container theme-showcase" role="main" id="1gereng">
-<div class="jumbotron">
-<form id="mima">
-<div class="form-group">
-      <label for="pwd"><h3>密码:</h3></label>
-      <input type="password" class="form-control" id="pwd" placeholder="输入密码">
+<body>
+<ul class="nav nav-tabs">
+	<li class="nav-item">
+    <img src="icon1.ico"/>
+  </li>
+	<li class="nav-item">
+    <h3><a href='https://chenzihan-suzhou.github.io/'>陈子涵的网站</a></h3>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="https://chenzihan-suzhou.github.io/">主页</a>
+  </li>
+  <li class="nav-item dropdown">
+<!--
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Link 1</a>
+      <a class="dropdown-item" href="#">Link 2</a>
+      <a class="dropdown-item" href="#">Link 3</a>
     </div>
-<p>请勿ENTER！请点击确认！</p>
-<button type="button" class="btn btn-lg btn-default" id="ok" style="display: inline-block;"><h2>确认</h2></button>
-</form>
-<button type="button" class="btn btn-lg btn-default" id="ppp"><h2><a href="https://chenzihan-suzhou.github.io/private12345678910.html">进入个人空间</a></h2></button>
-</div>
-</div>
-<script>
-$(document).ready(function(){
-  $("#zhuye").click(function(){
-	 $("#gonggong").attr("class","undefined");
-	 $("#gereng").attr("class","undefined");
-     $(this).attr("class","active");
-	 $("#1gonggong").hide();
-	$("#1gereng").hide();
-	$("#1zhuye").show();
-  });
-    $("#gonggong").click(function(){
-	 $("#zhuye").attr("class","undefined");
-	 $("#gereng").attr("class","undefined");
-     $(this).attr("class","active");
-	 	 $("#1gonggong").show();
-	$("#1gereng").hide();
-	$("#1zhuye").hide();
-  });
-     $("#gereng").click(function(){
-	 $("#zhuye").attr("class","undefined");
-	 $("#gonggong").attr("class","undefined");
-	 	 $("#1gonggong").hide();
-	$("#1gereng").show();
-	$("#1zhuye").hide();
-     $(this).attr("class","active");
-  });
-    $("#ok").click(function(){
-	if($("#pwd").val()=="chenzihanzuiniule"){
-	$("#ppp").show();
-	$("#mima").hide();
-	}
-	else{
-	alert("请输入正确的密码！")
-	}
-	  });
-});
-</script>
-<script>
-$(document).ready(function(){
-	$("#1zhuye").show();
-	 $("#1gonggong").hide();
-	 $("#ppp").hide();
-	$("#1gereng").hide();})
-</script>
+-->
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">我做的一些工具</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">一些游戏</a>
+  </li>
+</ul>
 </body>
 </html>
